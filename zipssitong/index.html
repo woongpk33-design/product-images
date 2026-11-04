@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>집씨통 안내 · 노을공원시민모임</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="집씨통 키우는 방법, 자주 묻는 질문, 돌려보내는 방법 안내">
+<meta name="theme-color" content="#3F4A33">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 14px; }
+  body {
+    margin: 0; background: #F2EEE2; color: #33362B;
+    font-family: 'Nanum Myeongjo', serif; line-height: 1.68;
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: inherit; }
+  ::selection { background: #C3CBAE; }
+
+  .wrap { max-width: 520px; margin: 0 auto; padding: 0 18px 56px; }
+
+  /* 머리말 */
+  .hero {
+    background: linear-gradient(160deg, #46523A 0%, #39432F 100%);
+    color: #F4F1E6; padding: 38px 18px 30px; text-align: center;
+  }
+  .hero h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.01em; }
+  .hero .sub { margin-top: 8px; font-size: 14px; color: #C7CDB4; letter-spacing: 0.02em; }
+  .hero p { margin: 16px auto 0; max-width: 420px; font-size: 15px; color: #E3E0D1; }
+
+  /* 상황별 바로가기 */
+  .jump { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: -18px; }
+  .jump a {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 5px; padding: 15px 6px; border-radius: 14px; background: #FDFBF5;
+    border: 1px solid #DFD8C4; box-shadow: 0 4px 14px rgba(85,82,58,.09);
+    text-decoration: none; text-align: center;
+  }
+  .jump .ico { font-size: 21px; line-height: 1; }
+  .jump .t { font-size: 13.5px; font-weight: 700; color: #3F4A33; }
+
+  /* 섹션 */
+  section { margin-top: 38px; scroll-margin-top: 14px; }
+  h2 {
+    margin: 0 0 14px; font-size: 19px; font-weight: 800; color: #3F4A33;
+    padding-bottom: 9px; border-bottom: 2px solid #D6CDB6;
+  }
+  h2 .n {
+    display: inline-block; min-width: 23px; height: 23px; line-height: 23px;
+    margin-right: 8px; border-radius: 50%; background: #5F6A4B; color: #F4F1E6;
+    font-size: 13px; text-align: center; vertical-align: 2px;
+  }
+
+  .card {
+    background: #FDFBF5; border: 1px solid #E2DBC8; border-radius: 14px;
+    padding: 16px 17px; margin-bottom: 11px;
+  }
+  .card h3 { margin: 0 0 7px; font-size: 15.5px; font-weight: 700; color: #3F4A33; }
+  .card p  { margin: 0; font-size: 14.8px; color: #4C4F41; }
+  .card p + p { margin-top: 9px; }
+
+  .note {
+    background: #FBF4E4; border: 1px solid #E6D6AE; border-left: 4px solid #B98B3E;
+    border-radius: 11px; padding: 14px 15px; font-size: 14.5px; color: #5A4A2A;
+  }
+  .note b { color: #8A5F1C; }
+
+  /* 접었다 펴는 Q&A */
+  details {
+    background: #FDFBF5; border: 1px solid #E2DBC8; border-radius: 13px;
+    margin-bottom: 9px; overflow: hidden;
+  }
+  details[open] { border-color: #C9CCB4; box-shadow: 0 5px 16px rgba(85,82,58,.09); }
+  summary {
+    list-style: none; cursor: pointer; padding: 15px 44px 15px 16px; position: relative;
+    font-size: 15.3px; font-weight: 700; color: #3F4A33;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: '+'; position: absolute; right: 17px; top: 50%; transform: translateY(-50%);
+    font-size: 19px; font-weight: 400; color: #8A9170;
+  }
+  details[open] summary::after { content: '−'; }
+  details .body { padding: 0 16px 16px; font-size: 14.8px; color: #4C4F41; }
+  details .body p { margin: 0; }
+  details .body p + p { margin-top: 9px; }
+
+  /* 버튼 */
+  .btn {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 15px 18px; border-radius: 14px; background: #5F6A4B; color: #F4F1E6;
+    font-size: 15.5px; font-weight: 700; text-decoration: none; margin-bottom: 10px;
+    box-shadow: 0 6px 18px rgba(74,82,52,.22);
+  }
+  .btn.ghost { background: #FDFBF5; color: #3F4A33; border: 1px solid #C9CCB4; box-shadow: none; }
+
+  .steps { counter-reset: s; }
+  .steps .card { position: relative; padding-left: 52px; }
+  .steps .card::before {
+    counter-increment: s; content: counter(s);
+    position: absolute; left: 16px; top: 16px;
+    width: 24px; height: 24px; line-height: 24px; text-align: center;
+    border-radius: 50%; background: #E7E3D2; color: #5F6A4B; font-size: 13px; font-weight: 700;
+  }
+
+  footer {
+    margin-top: 44px; padding-top: 22px; border-top: 1px solid #DDD6C2;
+    text-align: center; font-size: 13.5px; color: #767A64;
+  }
+  footer a { color: #5F6A4B; }
+
+  @media (max-width: 360px) {
+    .jump { grid-template-columns: 1fr 1fr; }
+    .hero h1 { font-size: 23px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>집에서 씨앗 키우는 통나무</h1>
+  <div class="sub">노을공원시민모임</div>
+  <p>도토리 한 알을 100일 동안 키워주시면,<br>노을공원의 숲이 됩니다.</p>
+</div>
+
+<div class="wrap">
+
+  <nav class="jump">
+    <a href="#start"><span class="ico">📦</span><span class="t">받았어요</span></a>
+    <a href="#grow"><span class="ico">🌱</span><span class="t">키우는 중</span></a>
+    <a href="#back"><span class="ico">↩️</span><span class="t">돌려보내기</span></a>
+  </nav>
+
+  <section id="why">
+    <h2><span class="n">0</span>왜 하는 활동인가요</h2>
+    <div class="card">
+      <p>노을공원은 쓰레기 매립지 위에 만들어진 공원입니다. 이곳에 숲을 되살리는 일을 시민들과 함께 하고 있습니다.</p>
+      <p>묘목을 사다 심는 대신, <b>도토리부터 길러서</b> 심습니다. 그래야 이 땅에서 살아남는 나무가 되기 때문입니다. 그 첫 100일을 여러분이 맡아주시는 것입니다.</p>
+    </div>
+    <a class="btn ghost" href="https://www.youtube.com/watch?v=AEUsmXkKr8Y" target="_blank" rel="noopener">▶ 활동 취지 영상 보기 (3분)</a>
+  </section>
+
+  <section id="start">
+    <h2><span class="n">1</span>집씨통을 받으셨다면</h2>
+    <div class="steps">
+      <div class="card">
+        <h3>포장재를 버리지 마세요</h3>
+        <p>나무화분, 고무줄, 흙덮개, 종이봉투, 박스 <b>전부 다시 씁니다.</b> 돌려보내실 때 받으셨던 그대로 포장해서 보내주시면 됩니다.</p>
+      </div>
+      <div class="card">
+        <h3>볕이 드는 곳에 두세요</h3>
+        <p>창가처럼 햇빛이 들어오는 자리가 좋습니다. 실내도 괜찮습니다.</p>
+      </div>
+      <div class="card">
+        <h3>물을 주세요</h3>
+        <p>흙 표면이 말랐을 때 흠뻑 주시면 됩니다.</p>
+      </div>
+    </div>
+    <div class="note">
+      <b>테이프는 쓰지 말아주세요.</b> 일회용 쓰레기를 만들지 않는 것도 이 활동의 중요한 부분입니다.
+    </div>
+  </section>
+
+  <section id="grow">
+    <h2><span class="n">2</span>키우는 동안</h2>
+    <details>
+      <summary>물은 얼마나 자주 줘야 하나요?</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+    <details>
+      <summary>싹이 안 나요</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+    <details>
+      <summary>잎이 노랗게 변했어요</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+    <details>
+      <summary>곰팡이가 생겼어요</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+    <details>
+      <summary>여행을 가는데 어떻게 하나요?</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+  </section>
+
+  <section id="back">
+    <h2><span class="n">3</span>돌려보내실 때</h2>
+    <div class="card">
+      <h3>100일이 지나면 보내주세요</h3>
+      <p>받으신 날부터 <b>약 100일</b> 키우신 뒤 노을공원으로 돌려보내주시면 됩니다. 3개월쯤 됐을 때 연락 주시면 안내해드립니다.</p>
+    </div>
+    <div class="card">
+      <h3>받으셨던 그대로 포장해주세요</h3>
+      <p>나무화분·고무줄·흙덮개·종이봉투·박스를 그대로 다시 포장해주세요. 뚜껑보다 크게 자랐어도 괜찮습니다. 어린 나무는 부드러워서 잘 구부려 넣으면 뚜껑을 벗기자마자 쑤욱 펴집니다.</p>
+    </div>
+    <div class="card">
+      <h3>택배비는 저희가 냅니다</h3>
+      <p>아래 신청서를 작성해주시면 CJ대한통운에서 <b>착불로 수거</b>하러 방문합니다.</p>
+    </div>
+    <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSed7ZEeCpIRjmwGqjCkiv9E1UDp3J1AwriH1tVtVg0rQnqwJQ/viewform" target="_blank" rel="noopener">반납 신청서 작성하기</a>
+    <div class="card">
+      <h3>그 다음은요?</h3>
+      <p>돌려받은 나무는 양묘장에서 <b>2~3년</b> 더 돌본 뒤, 노을공원 사면에 심습니다. 여러분이 키운 도토리가 실제로 숲이 되는 것입니다.</p>
+    </div>
+  </section>
+
+  <section id="etc">
+    <h2><span class="n">4</span>그 밖에</h2>
+    <details>
+      <summary>봉사시간(1365) 인정받을 수 있나요?</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+    <details>
+      <summary>기부금영수증을 받고 싶어요</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+    <details>
+      <summary>단체로 참여하고 싶어요</summary>
+      <div class="body"><p>(내용을 채워주세요)</p></div>
+    </details>
+  </section>
+
+  <section id="ask">
+    <h2><span class="n">5</span>더 궁금하시면</h2>
+    <div class="card">
+      <p>아래 카페에 자세한 안내와 다른 분들의 질문·답변이 모여 있습니다. 글을 남겨주시면 확인 후 답변드립니다.</p>
+    </div>
+    <a class="btn" href="https://cafe.daum.net/zipssitong" target="_blank" rel="noopener">집씨통 카페 바로가기</a>
+  </section>
+
+  <footer>
+    노을공원시민모임<br>
+    <a href="https://cafe.daum.net/zipssitong" target="_blank" rel="noopener">cafe.daum.net/zipssitong</a>
+  </footer>
+
+</div>
+</body>
+</html>
